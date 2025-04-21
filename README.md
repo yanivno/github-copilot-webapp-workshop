@@ -47,13 +47,15 @@ Lets generate a new API Call to allow us to search movies by partial title
    - Use the Inline code generator by opening the inline chat window 
         in VSCode [Command+I](Mac) or [Ctrl+I](Windows)
         in Jetbrains [Shift+Ctrl+I](Mac) or [Shift+Ctrl+G](Windows)
-   - You can write your own prompt or use the following:
+   
+   You can write your own prompt
+   <details>
+   <summary>or use the following</summary>
     
-
     add a new route function that allows me to search for movies by partial title following the implementation instructions:
     - The route should accept a query parameter called 'title' and return a list of movies that contains the partial search.
     - the route should be called '/api/search' and accept a query parameter called 'query'.
-
+   </details>
    - Test the new route by running the app and accessing it in your browser
 
 ## Lab #3 : implement a new feature for Application with Edit Mode
