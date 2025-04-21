@@ -56,7 +56,8 @@ Lets generate a new API Call to allow us to search movies by partial title
     - The route should accept a query parameter called 'title' and return a list of movies that contains the partial search.
     - the route should be called '/api/search' and accept a query parameter called 'query'.
    </details>
-   - Test the new route by running the app and accessing it in your browser
+   
+   Test the new route by running the app and accessing it in your browser
 
 ## Lab #3 : implement a new feature for Application with Edit Mode
 
