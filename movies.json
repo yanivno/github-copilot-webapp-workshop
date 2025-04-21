@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "title": "Inception",
+        "director": "Christopher Nolan",
+        "year": 2010,
+        "country": "USA",
+        "main_actors": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
+        "poster": "static/resources/posters/inception.jpg"
+    },
+    {
+        "id": 2,
+        "title": "The Matrix",
+        "director": "The Wachowskis",
+        "year": 1999,
+        "country": "USA",
+        "main_actors": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
+        "poster": "static/resources/posters/matrix.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Interstellar",
+        "director": "Christopher Nolan",
+        "year": 2014,
+        "country": "USA",
+        "main_actors": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
+        "poster": "static/resources/posters/interstellar.jpg"
+    },
+    {
+        "id": 4,
+        "title": "The Dark Knight",
+        "director": "Christopher Nolan",
+        "year": 2008,
+        "country": "USA",
+        "main_actors": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
+        "poster": "static/resources/posters/dark_knight.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Pulp Fiction",
+        "director": "Quentin Tarantino",
+        "year": 1994,
+        "country": "USA",
+        "main_actors": ["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
+        "poster": "static/resources/posters/pulp_fiction.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Forrest Gump",
+        "director": "Robert Zemeckis",
+        "year": 1994,
+        "country": "USA",
+        "main_actors": ["Tom Hanks", "Robin Wright", "Gary Sinise"],
+        "poster": "static/resources/posters/forrest_gump.jpg"
+    },
+    {
+        "id": 7,
+        "title": "The Shawshank Redemption",
+        "director": "Frank Darabont",
+        "year": 1994,
+        "country": "USA",
+        "main_actors": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"],
+        "poster": "static/resources/posters/shawshank.jpg"
+    },
+    {
+        "id": 8,
+        "title": "The Godfather",
+        "director": "Francis Ford Coppola",
+        "year": 1972,
+        "country": "USA",
+        "main_actors": ["Marlon Brando", "Al Pacino", "James Caan"],
+        "poster": "static/resources/posters/godfather.jpg"
+    }
+]

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directors</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .director-section {
+            margin-bottom: 40px;
+        }
+        .director-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .movies-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .movie-card {
+            width: 220px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            background-color: #fff;
+        }
+        .movie-card:hover {
+            transform: translateY(-5px);
+        }
+        .movie-poster {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .movie-info {
+            padding: 10px;
+        }
+        .movie-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .movie-year {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <div class="logo">MB</div>
+        <a href="/"><i class="fas fa-home"></i> <span>Home</span></a>
+        <a href="/directors" class="active"><i class="fas fa-user-friends"></i> <span>Directors</span></a>
+        <a href="#"><i class="fas fa-film"></i> <span>Movies</span></a>
+        <a href="#"><i class="fas fa-star"></i> <span>Actors</span></a>
+        <a href="#"><i class="fas fa-info-circle"></i> <span>About</span></a>
+        <div class="toggle-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1>Directors</h1>
+        
+        {% for director, movies in directors.items() %}
+        <div class="director-section">
+            <h2 class="director-name">{{ director }}</h2>
+            <div class="movies-grid">
+                {% for movie in movies %}
+                <div class="movie-card">
+                    <img src="{{ movie.poster }}" alt="{{ movie.title }} poster" class="movie-poster">
+                    <div class="movie-info">
+                        <div class="movie-title">{{ movie.title }}</div>
+                        <div class="movie-year">{{ movie.year }}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <script>
+        document.querySelector('.toggle-btn').addEventListener('click', function() {
+            document.querySelector('.sidenav').classList.toggle('collapsed');
+            document.querySelector('.main-content').classList.toggle('expanded');
+        });
+    </script>
+</body>
+</html>

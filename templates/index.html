@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Database</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .movie-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .movie-card {
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            background-color: #fff;
+        }
+        .movie-card:hover {
+            transform: translateY(-5px);
+        }
+        .movie-poster {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .movie-info {
+            padding: 15px;
+        }
+        .movie-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .movie-details {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <div class="logo">MB</div>
+        <a href="#" class="active"><i class="fas fa-home"></i> <span>Home</span></a>
+        <a href="#"><i class="fas fa-film"></i> <span>Movies</span></a>
+        <a href="/directors"><i class="fas fa-user-friends"></i> <span>Directors</span></a>
+        <a href="#"><i class="fas fa-star"></i> <span>Actors</span></a>
+        <a href="#"><i class="fas fa-info-circle"></i> <span>About</span></a>
+        <div class="toggle-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1>Movie Database</h1>
+        <div class="movie-list">
+            {% for movie in movies %}
+            <div class="movie-card">
+                <img src="{{ movie.poster }}" alt="{{ movie.title }} poster" class="movie-poster">
+                <div class="movie-info">
+                    <div class="movie-title">{{ movie.title }} ({{ movie.year }})</div>
+                    <div class="movie-details">
+                        <p>Directed by: {{ movie.director }}</p>
+                        <p>Country: {{ movie.country }}</p>
+                        <p>Main Actors: {{ movie.main_actors | join(', ') }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.toggle-btn').addEventListener('click', function() {
+            document.querySelector('.sidenav').classList.toggle('collapsed');
+            document.querySelector('.main-content').classList.toggle('expanded');
+        });
+    </script>
+</body>
+</html>
