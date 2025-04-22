@@ -63,7 +63,7 @@ add a new route function that allows me to search for movies by partial title fo
 Test the new route by running the app by using curl
 
 ```bash
-curl -X GET "http://127.0.0.1:5000/api/search?query=inter"
+curl -X GET -v "http://127.0.0.1:5000/api/search?query=inter"
 ```
 <details>
 <summary>sample response</summary>
