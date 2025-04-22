@@ -104,24 +104,25 @@ curl -X GET -v "http://127.0.0.1:5000/api/search?query=inter"
 
 ### Generate Unit Tests
 
-   Lets write some testing for the code we just generated
-   - Open `test_app.py` file and place the cursor where you want to add the new test function
-   - Use the Inline code generator by opening the inline chat window 
-        in VSCode [Command+I](Mac) or [Ctrl+I](Windows)
-        in Jetbrains [Shift+Ctrl+I](Mac) or [Shift+Ctrl+G](Windows)
-   - Write a prompt to generate unit tests for the new route we just created
-   <details>
-   <summary>or use the following prompt</summary>
-    
-    add unit test module that tests all application routes in the 'app.py' file.  
-    The tests should cover positive test cases and negative test cases for each route.
-    The tests should be written in the 'test_app.py' file and use the unittest framework.
-   </details>
+Lets write some testing for the code we just generated
+- Open `app.py` file and the Github Copilot chat window, switch to Edit Mode
+  (app.py file would be added to the context automatically)
+- Write a prompt to generate unit tests for methods in the app.py file
+<details>
+<summary>or use the following prompt</summary>
+add unit test module that tests all application routes in the 'app.py' file.  
+The tests should cover positive test cases and negative test cases for each route.
+The tests should be written in the 'test_app.py' file and use the unittest framework.
+</details>
 
-   >Tip: you can use the built-in '/tests' command automation to ask GitHub Copilot to generate tests for app in @workspace context.
+>Tip: you can use the built-in '/tests' command in Ask mode to ask GitHub Copilot to generate tests for app in @workspace context.
+
+>Tip: in VSCode you can use the built-in '@terminal' extension in Ask mode to ask GitHub Copilot to diagnose errors or fix the falied tests for app, if there are any. sample prompt: @terminal fix tests in test_app.py
 
 ## Lab #3 : implement a new feature for Application with Edit Mode
 
 ## Lab #4 : Use Agent Mode to Implement a new feature for Application
 
-## Lab #5 : Explore MCP Server with Agent Mode
+>The Main difference between Edit Mode and Agent Mode is that in Edit Mode, you are in control of the code generation process.You can ask Copilot to generate code snippets, and it will provide you with suggestions based on your prompts. In Agent Mode, Copilot takes the lead and generates code based on your requirements without needing to specify every detail.
+
+## Lab #5 : Explore MCP with Agent Mode
