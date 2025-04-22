@@ -67,7 +67,7 @@ curl -X GET "http://127.0.0.1:5000/api/search?query=inter"
 ```
 <details>
 <summary>sample response</summary>
-```
+<pre>
 * Trying 127.0.0.1:5000...
 * Connected to 127.0.0.1 (127.0.0.1) port 5000
 > GET /api/search?query=inter HTTP/1.1
@@ -99,7 +99,7 @@ curl -X GET "http://127.0.0.1:5000/api/search?query=inter"
   }
 ]
 * Closing connection 0
-```
+</pre>
 </details>
 
 ### Generate Unit Tests
