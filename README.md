@@ -44,23 +44,62 @@ app should now be accsessible in `http://127.0.0.1:5000`
 ## Lab #2 : Get to know Copilot and Generate some code
 
 ### New Code Generation
-   Lets generate a new API Call to allow us to search movies by partial title
-   - Open `app.py` file and place the cursor where you want to add the new route function
-   - Use the Inline code generator by opening the inline chat window 
-        in VSCode [Command+I](Mac) or [Ctrl+I](Windows)
-        in Jetbrains [Shift+Ctrl+I](Mac) or [Shift+Ctrl+G](Windows)
-   
-  we would like to implement a new feature for the application - an API for searching movies by partial title.
-   write a propmt to generate a new route function in 'app.py' file
-   <details>
-   <summary>or use the following prompt</summary>
-    
-    add a new route function that allows me to search for movies by partial title following the implementation instructions:
-    - The route should accept a query parameter called 'title' and return a list of movies that contains the partial search.
-    - the route should be called '/api/search' and accept a query parameter called 'query'.
-   </details>
-   
-   Test the new route by running the app and accessing it in your browser
+
+Lets generate a new API Call to allow us to search movies by partial title
+- Open `app.py` file and place the cursor where you want to add the new route function
+- Use the Inline code generator by opening the inline chat window 
+      in VSCode [Command+I](Mac) or [Ctrl+I](Windows)
+      in Jetbrains [Shift+Ctrl+I](Mac) or [Shift+Ctrl+G](Windows)
+
+we would like to implement a new feature for the application - an API for searching movies by partial title.
+write a propmt to generate a new route function in 'app.py' file
+<details>
+<summary>or use the following prompt</summary>
+add a new route function that allows me to search for movies by partial title following the implementation instructions:
+- The route should accept a query parameter called 'title' and return a list of movies that contains the partial search.
+- the route should be called '/api/search' and accept a query parameter called 'query'.
+</details>
+
+Test the new route by running the app by using curl
+
+```bash
+curl -X GET "http://127.0.0.1:5000/api/search?query=inter"
+```
+<details>
+<summary>sample response</summary>
+ 
+* Trying 127.0.0.1:5000...
+* Connected to 127.0.0.1 (127.0.0.1) port 5000
+> GET /api/search?query=inter HTTP/1.1
+> Host: 127.0.0.1:5000
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Server: Werkzeug/3.1.3 Python/3.13.3
+< Date: Tue, 22 Apr 2025 10:45:17 GMT
+< Content-Type: application/json
+< Content-Length: 294
+< Connection: close
+< 
+[
+  {
+    "country": "USA",
+    "director": "Christopher Nolan",
+    "id": 3,
+    "main_actors": [
+      "Matthew McConaughey",
+      "Anne Hathaway",
+      "Jessica Chastain"
+    ],
+    "poster": "static/resources/posters/interstellar.jpg",
+    "title": "Interstellar",
+    "year": 2014
+  }
+]
+* Closing connection 0
+</details>
 
 ### Generate Unit Tests
 

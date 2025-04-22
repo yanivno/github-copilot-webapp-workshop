@@ -45,7 +45,6 @@ def delete_movie(movie_id):
     logging.info("Movie deleted successfully")
     return '', 204
 
-
 @app.route('/directors')
 def directors():
     logging.info("Rendering directors page")
