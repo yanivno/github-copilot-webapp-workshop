@@ -42,15 +42,18 @@ app should now be accsessible in `http://127.0.0.1:5000`
       - ```@github How to create a ui template in Python Flask?```  
    
 ## Lab #2 : Get to know Copilot and Generate some code
-Lets generate a new API Call to allow us to search movies by partial title
+
+### New Code Generation
+   Lets generate a new API Call to allow us to search movies by partial title
    - Open `app.py` file and place the cursor where you want to add the new route function
    - Use the Inline code generator by opening the inline chat window 
         in VSCode [Command+I](Mac) or [Ctrl+I](Windows)
         in Jetbrains [Shift+Ctrl+I](Mac) or [Shift+Ctrl+G](Windows)
    
-   You can write your own prompt
+  we would like to implement a new feature for the application - an API for searching movies by partial title.
+   write a propmt to generate a new route function in 'app.py' file
    <details>
-   <summary>or use the following</summary>
+   <summary>or use the following prompt</summary>
     
     add a new route function that allows me to search for movies by partial title following the implementation instructions:
     - The route should accept a query parameter called 'title' and return a list of movies that contains the partial search.
@@ -58,6 +61,24 @@ Lets generate a new API Call to allow us to search movies by partial title
    </details>
    
    Test the new route by running the app and accessing it in your browser
+
+### Generate Unit Tests
+
+   Lets write some testing for the code we just generated
+   - Open `test_app.py` file and place the cursor where you want to add the new test function
+   - Use the Inline code generator by opening the inline chat window 
+        in VSCode [Command+I](Mac) or [Ctrl+I](Windows)
+        in Jetbrains [Shift+Ctrl+I](Mac) or [Shift+Ctrl+G](Windows)
+   - Write a prompt to generate unit tests for the new route we just created
+   <details>
+   <summary>or use the following prompt</summary>
+    
+    add unit test module that tests all application routes in the 'app.py' file.  
+    The tests should cover positive test cases and negative test cases for each route.
+    The tests should be written in the 'test_app.py' file and use the unittest framework.
+   </details>
+
+   >Tip: you can use the built-in '/tests' command automation to ask GitHub Copilot to generate tests for app in @workspace context.
 
 ## Lab #3 : implement a new feature for Application with Edit Mode
 
