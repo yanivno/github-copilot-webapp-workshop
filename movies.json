@@ -10,7 +10,8 @@
             "Joseph Gordon-Levitt",
             "Elliot Page"
         ],
-        "poster": "static/resources/posters/inception.jpg"
+        "poster": "static/resources/posters/inception.jpg",
+        "genres": ["Sci-Fi", "Action", "Thriller"]
     },
     {
         "id": 2,
@@ -23,7 +24,8 @@
             "Laurence Fishburne",
             "Carrie-Anne Moss"
         ],
-        "poster": "static/resources/posters/matrix.jpg"
+        "poster": "static/resources/posters/matrix.jpg",
+        "genres": ["Sci-Fi", "Action"]
     },
     {
         "id": 3,
@@ -36,7 +38,8 @@
             "Anne Hathaway",
             "Jessica Chastain"
         ],
-        "poster": "static/resources/posters/interstellar.jpg"
+        "poster": "static/resources/posters/interstellar.jpg",
+        "genres": ["Sci-Fi", "Drama", "Adventure"]
     },
     {
         "id": 4,
@@ -49,7 +52,8 @@
             "Heath Ledger",
             "Aaron Eckhart"
         ],
-        "poster": "static/resources/posters/dark_knight.jpg"
+        "poster": "static/resources/posters/dark_knight.jpg",
+        "genres": ["Action", "Crime", "Drama"]
     },
     {
         "id": 5,
@@ -62,7 +66,8 @@
             "Uma Thurman",
             "Samuel L. Jackson"
         ],
-        "poster": "static/resources/posters/pulp_fiction.jpg"
+        "poster": "static/resources/posters/pulp_fiction.jpg",
+        "genres": ["Crime", "Drama"]
     },
     {
         "id": 6,
@@ -75,7 +80,8 @@
             "Robin Wright",
             "Gary Sinise"
         ],
-        "poster": "static/resources/posters/forrest_gump.jpg"
+        "poster": "static/resources/posters/forrest_gump.jpg",
+        "genres": ["Drama", "Romance"]
     },
     {
         "id": 7,
@@ -88,7 +94,8 @@
             "Morgan Freeman",
             "Bob Gunton"
         ],
-        "poster": "static/resources/posters/shawshank.jpg"
+        "poster": "static/resources/posters/shawshank.jpg",
+        "genres": ["Drama"]
     },
     {
         "id": 8,
@@ -101,11 +108,13 @@
             "Al Pacino",
             "James Caan"
         ],
-        "poster": "static/resources/posters/godfather.jpg"
+        "poster": "static/resources/posters/godfather.jpg",
+        "genres": ["Crime", "Drama"]
     },
     {
         "director": "Test Director",
         "title": "Test Movie",
-        "id": 9
+        "id": 9,
+        "genres": ["Unknown"]
     }
 ]
