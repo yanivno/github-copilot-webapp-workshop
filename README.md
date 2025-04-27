@@ -249,3 +249,13 @@ We would create a local configuration file for MCP server in the root of your re
    - ```assign myself to issue #1 in my-demo-repo github repository```
    - ```add a comment to issue #1 in my-demo-repo github repository with the text "this is a test comment"```
    - ```label issue #1 in my-demo-repo github repository with "kind/bug"```
+
+## Lab #6 : Code Review with Copilot Chat 
+### Code Review with Copilot Chat
+
+>This Lab is designed for Visual Studio Code.
+
+   GitHub Copilot can review your code and provide feedback. Where possible, Copilot's feedback includes suggested changes which you can apply with a couple of clicks.
+   - Open the `app.py` file 
+   - In MacOS press [Cmd+Shift+P] | in Windows [Ctrl+Shift+P] po open the command pallette and prompt: GitHub Copilot: Review and comment
+   - GitHub Copilot will suggest code improvements, which you can choose to accept, reject, or skip to move on to the next suggestion. You'll also find the complete suggestions in the comments section.
