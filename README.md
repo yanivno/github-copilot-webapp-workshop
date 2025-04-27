@@ -177,15 +177,75 @@ Test the new feature by running the app and accessing the UI in your browser
 
 you can continue to iterate on the code by asking Copilot to add more features or fix bugs in the code.
 
-## Lab #4 : Use Agent Mode to Implement a new feature for Application
+## Lab #4 : Use Agent Mode to Implement a new feature for Application ***
 
 >The Main difference between Edit Mode and Agent Mode is that in Edit Mode, you are in control of the code generation process.You can ask Copilot to generate code snippets, and it will provide you with suggestions based on your prompts. In Agent Mode, Copilot takes the lead and generates code based on your requirements without needing to specify every detail.
 
+>This Lab is designed for Visual Studio Code as Agent Mode is not available yet in other IDEs.
+
 ## Lab #5 : Explore MCP with Agent Mode
+
+>This Lab is designed for Visual Studio Code as both MCP support in Jetbrains and Agent Mode are not available yet in those IDEs.
+
+>MCP support in Visual Studio Code is in Public Preview and may be enhanced in future versions. Instructions for activation is available in [Official Documentation](https://github.com/github/github-mcp-server)
 
 Model Context Protocol (MCP) is an open-source and universal communication protocol that allows AI models to connect to external data sources. MCP has been developed by Anthropic, and Google, OpenAI, and Microsoft are now working to adopt the universal standard. Many popular MCP servers, including Google Maps, Slack, GitHub, Gmail, and more, allow AI models to interact with these tools and services.
 
 Native support in GitHub Copilot Chat for MCP allows you to use the protocol to connect to external data sources and services. This enables you to build more powerful and flexible applications that can leverage the capabilities of AI models and external data sources.
 
-We are going to use External 
+Further read on adding MCP Tools to Agent mode is available in [Here](https://code.visualstudio.com/docs/copilot/chat/mcp-servers)
+MCP servers listing [Here](https://github.com/punkpeye/awesome-mcp-servers)
+and [Here](https://mcp.so)
 
+### Create a personal access token
+To use the GitHub MCP server, you need to create a personal access token (PAT) with the necessary permissions. Follow these steps to create a PAT:
+1. Go to your GitHub account settings.
+2. Click on "Developer settings" in the left sidebar.
+3. Click on "Personal access tokens" in the left sidebar.
+4. Click on "Tokens (classic)".
+5. Click on "Generate new token".
+6. Give your token a descriptive name (e.g., "MCP Token").
+7. Select the scopes you want to grant to the token. select "repo" to have access your repositories.
+8. Click on "Generate token".
+9. Copy the generated token and store it securely. You won't be able to see it again.
+
+
+### Create mcp configuration file
+We would create a local configuration file for MCP server in the root of your repository.
+- Create a file named `.vscode/mcp.json` in your repository.
+- Add the following content to the file:
+```json
+{
+   "servers": {
+      "github": {
+         "command": "docker",
+         "args": [
+               "run",
+               "-i",
+               "--rm",
+               "-e",
+               "GITHUB_PERSONAL_ACCESS_TOKEN",
+               "mcp/github"
+         ],
+         "env": {
+               "GITHUB_PERSONAL_ACCESS_TOKEN": "<your Github PAT Token>"
+         }
+      }
+   }
+}
+```
+- Save the file.
+- Switch Github Copilot Chat to Agent Mode by selecting the "Agent" option in the dropdown menu.
+- Click on the Refresh Icon to list the new Github MCP server tools to be used by GitHub Copilot Chat.
+
+### Use MCP with Agent Mode
+- In the Github Copilot Chat window, switch to Agent Mode by selecting the "Agent" option in the dropdown menu.
+- Use the natural language prompt to use tools with Github MCP server:
+- Some samples: 
+   - ```summarize issues in github/docs github repository```
+   - ```summarize prs in github/docs github repository```
+   - ```create a new private github repository name my-demo-repo```
+   - ```create a new issue in repository my-demo-repo github repository with title "test issue" and body "this is a test issue"```
+   - ```assign myself to issue #1 in my-demo-repo github repository```
+   - ```add a comment to issue #1 in my-demo-repo github repository with the text "this is a test comment"```
+   - ```label issue #1 in my-demo-repo github repository with "kind/bug"```
