@@ -183,6 +183,24 @@ you can continue to iterate on the code by asking Copilot to add more features o
 
 >This Lab is designed for Visual Studio Code as Agent Mode is not available yet in other IDEs.
 
+### New Feature Generation
+We are going to implement a new feature that allows for UI of User Reviews of movies, using Agent Mode.
+- In Github Copilot chat window, switch to Agent Mode by Selecting 'Agent' in dropdown
+>Using GPT-4.1|Claude 3.7 or o4-mini will yeald different results and might be useful to experiment with.
+- Prompt Copilot to generate a new feature that allows for UI of User Reviews of movies
+<details>
+<summary>or use the following prompt</summary>
+Implement a new feature that allows for UI of User Reviews of movies.
+The feature should include the following:
+- A form for submitting user reviews.
+- A section for displaying user reviews.
+- The reviews should be stored in movies.json file.
+- The reviews should be displayed in the same format as the original list of movies.
+- Create a movie details page that displays the movie title, poster, and reviews.
+</details>
+- Test the new feature by running the app and accessing the UI in your browser
+- You can continue to iterate on the code by asking Copilot to add more features or fix bugs in the code.
+
 ## Lab #5 : Explore MCP with Agent Mode
 
 >This Lab is designed for Visual Studio Code as both MCP support in Jetbrains and Agent Mode are not available yet in those IDEs.
