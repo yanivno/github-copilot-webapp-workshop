@@ -161,6 +161,7 @@ We are going to implement a new feature that allows for UI Filtering of movies b
 
 <details>
 <summary>or use the following prompt</summary>
+<pre>
 Implement a new feature that allows for UI Filtering of movies based on year and genre.
 The feature should include the following:
 - A dropdown menu for selecting the year of the movie.
@@ -171,6 +172,7 @@ The feature should include the following:
 - The filtering should be done on the server side using Python Flask.
 - add unit tests for the new feature in the 'test_app.py' file.
 - The new feature should be implemented in the 'app.py' file and the 'index.html' file.
+</pre>
 </details>
 
 Test the new feature by running the app and accessing the UI in your browser
