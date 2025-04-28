@@ -125,6 +125,8 @@ The tests should be written in the 'test_app.py' file and use the unittest frame
 
 ### Customize Code generation
 
+>This Lab is designed for Visual Studio Code as custom instruction is not available yet in Jetbrains IDEs.
+
 Github Copilot responses can be customized by providing additional context or instructions. This can help Copilot generate code that is more aligned with your specific requirements.
 those instructsion can be provided in the form of comments or docstrings in the code, or by using specific keywords or phrases in your prompts. 
    - In the root of your repository, create a file named ```.github/copilot-instructions.md```
@@ -149,7 +151,6 @@ those instructsion can be provided in the form of comments or docstrings in the 
     > GitHub Copilot will generate a documentation-style function declaration.
    - You can also use Copilot Chat to generate additional documentation. Open GitHub Copilot Chat and enter a prompt: ```Add comments to my code```
    - Add /docs and comments to other functions as well.
-   > When adding comments to the code, ensure that GitHub Copilot Chat applies custom instructions with each request.
 
 ## Lab #3 : implement a new feature for Application with Edit Mode
 
