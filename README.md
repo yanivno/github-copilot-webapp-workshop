@@ -55,9 +55,11 @@ we would like to implement a new feature for the application - an API for search
 write a propmt to generate a new route function in 'app.py' file
 <details>
 <summary>or use the following prompt</summary>
+<pre>
 add a new route function that allows me to search for movies by partial title following the implementation instructions:
 - The route should accept a query parameter called 'title' and return a list of movies that contains the partial search.
 - the route should be called '/api/search' and accept a query parameter called 'query'.
+</pre>
 </details>
 
 Test the new route by running the app by using curl
