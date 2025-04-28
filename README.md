@@ -161,7 +161,7 @@ We are going to implement a new feature that allows for UI Filtering of movies b
 
 <details>
 <summary>or use the following prompt</summary>
-```
+'''
 Implement a new feature that allows for UI Filtering of movies based on year and genre.
 The feature should include the following:
 - A dropdown menu for selecting the year of the movie.
@@ -172,7 +172,7 @@ The feature should include the following:
 - The filtering should be done on the server side using Python Flask.
 - add unit tests for the new feature in the 'test_app.py' file.
 - The new feature should be implemented in the 'app.py' file and the 'index.html' file.
-```
+'''
 </details>
 
 Test the new feature by running the app and accessing the UI in your browser
@@ -188,11 +188,11 @@ you can continue to iterate on the code by asking Copilot to add more features o
 ### New Feature Generation
 We are going to implement a new feature that allows for UI of User Reviews of movies, using Agent Mode.
 - In Github Copilot chat window, switch to Agent Mode by Selecting 'Agent' in dropdown
->Using GPT-4.1|Claude 3.7 or o4-mini will yeald different results and might be useful to experiment with.
+>Using GPT-4.1 | Claude 3.7 | o4-mini will yeald different results and might be useful to experiment with.
 - Prompt Copilot to generate a new feature that allows for UI of User Reviews of movies
 <details>
 <summary>or use the following prompt</summary>
-
+'''
 Implement a new feature that allows for UI of User Reviews of movies.
 The feature should include the following:
 - A form for submitting user reviews.
