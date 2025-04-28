@@ -277,10 +277,29 @@ We would create a local configuration file for MCP server in the root of your re
    - ```add a comment to issue #1 in my-demo-repo github repository with the text "this is a test comment"```
    - ```label issue #1 in my-demo-repo github repository with "kind/bug"```
 
+### Bonus Lab : Extend Github Copilot with your own MCP server
+You can develop your own MCP server using the MCP protocol.
+This allows you to create custom tools and services that can be used with AI models.
+Use the Lab [Here](https://github.com/orsharon7/mcp-vscode-github-copilot)
+
+### Bonus Lab #2 : Develop a Github Copilot Extension with SDK
+GitHub Copilot Extensions are a type of Copilot Extension built with GitHub Apps.
+GitHub Copilot Extensions are best suited for devs who want cross-platform compatibility and app management and support from GitHub.
+
+Copilot Extensions are integrations that expand the functionality of Copilot Chat, allowing developers to bring external tools, services, and custom behaviors into the Chat experience. You can use Copilot Extensions to extend the capabilities of Copilot Chat in a variety of ways, including:
+
+* Querying documentation: A Copilot Extension can allow Copilot Chat to query a third-party documentation service to find information about a specific topic.
+* AI-assisted coding: A Copilot Extension can use a third-party AI model to provide code suggestions.
+* Data retrieval: A Copilot Extension can allow Copilot Chat to query a third-party data service to retrieve information about a specific topic.
+* Action execution: A Copilot Extension can allow Copilot Chat to execute a specific action, such as posting to a message board or updating a tracking item in an external system.
+
+you can follow the implementation instructions [Here](https://github.com/arikbidny/github-copilot-sport-app/blob/main/README.md#task-2---build-your-first-github-copilot-extension)
+
 ## Lab #6 : Code Review with Copilot Chat 
+
 ### Code Review with Copilot Chat
 
->This Lab is designed for Visual Studio Code.
+>This Lab is designed for Visual Studio Code, as Code Review 
 
    GitHub Copilot can review your code and provide feedback. Where possible, Copilot's feedback includes suggested changes which you can apply with a couple of clicks.
    - Open the `app.py` file 
