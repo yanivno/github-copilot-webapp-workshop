@@ -2,9 +2,10 @@
 
 # Setup on your IDE
 
-## 1.1 : Activate your virtual environment
+## 1.1 : Create your virtual environment
 ```bash
 cd /path/to/your/project
+python3 -m venv .venv
 source .venv/bin/activate
 ```
 ## 1.2 : Install dependencies
